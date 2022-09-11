@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+#App {
+  width: 500px;
+  height: 700px;
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  color: #1a2431;
+  overflow: hidden;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#App > #Header {
+  padding: 10px;
+  font-size: 20px;
+  background: #1a2431;
+  color: #20678c;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#App > #Item-creator {
+  background: #f1ecec;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+}
+#App > #Item-creator > input {
+  border: none;
+  outline: none;
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 10px;
+  background: #1a2431;
+  color: #20678c;
+}
+#App > #Item-creator > input::placeholder {
+  color: #20678c;
+}
+#App > #Item-creator > button {
+  margin-left: 10px;
+  width: 50px;
+  height: 30px;
+  background: #1a2431;
+  border-radius: 5px;
+  color: #20678c;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  user-select: none;
+}
+#App > #Item-creator > button:active {
+  transform: scale(0.9);
+}
+#App > #Item-creator > button:hover {
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+#App > .item-list {
+  max-height: 500px;
+  overflow: auto;
+}
+#App > .item-list > .item {
+  width: 100%;
+  background: #f1ecec;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 10px;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+#App > .item-list > .item.completed {
+  background: #20678c;
+  color: #f1ecec;
+}
+#App > .item-list > .item > .action-bar {
+  margin-right: 10px;
+}
+
+#App > .item-list > .item > .action-bar > .action {
+  margin-bottom: 5px;
+  width: 30px;
+  height: 30px;
+  background: #1a2431;
+  border-radius: 5px;
+  color: #20678c;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+#App > .item-list > .item > .action-bar > .action:hover {
+  filter: brightness(1.5);
 }
 
-.App-link {
-  color: #61dafb;
+#App > .item-list > .item > .content-field > .date {
+  font-size: 10px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+  user-select: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#App > .item-list > .item > .content-field > .content {
+  font-size: 12px;
+  user-select: none;
 }
